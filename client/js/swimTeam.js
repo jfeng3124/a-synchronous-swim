@@ -18,6 +18,7 @@ const SwimTeam = {
         return name && name[1];
       })
       .addClass(`turn-${direction}`);
+      console.log($('.swimmer'))
 
     // same direction as last time? -> if yes, move the swim-team
     if (SwimTeam.direction === direction) {
