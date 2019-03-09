@@ -1,25 +1,18 @@
 (function() {
   const serverUrl = 'http://127.0.0.1:3000';
-  //rest JSON object
-  //using GET
-  //url = serverURL
-  //data
-  var getMessage = function (callback) {
+
+  setInterval(function() {
     $.ajax({
       url: serverUrl,
-      type: GET,
-      callback(message)
-    })
-  }
-
-  var test = function(message) {
-    console.log('message', message)
-  }
-
-  getMessage(test);
-
-
-
+      method: 'GET',
+      success: function (data) {
+        console.log('success', data)
+        SwimTeam.move(data.toString())
+      },
+      error: function () {
+        console.log(data, 'Failed GET request')
+      }
+    })}, 3000)
 })();
 
 //client
