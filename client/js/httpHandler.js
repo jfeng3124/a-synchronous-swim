@@ -12,7 +12,22 @@
       error: function () {
         console.log(data, 'Failed GET request')
       }
-    })}, 3000)
+    })}, 1000)
+  
+  // var getBackground = function () {
+  //   $.ajax({
+  //     url: serverUrl + '/background.jpg',
+  //     method: 'GET',
+  //     // success: function () {
+  //     //   window.location = window.location.href
+  //     // },
+  //     // error: function () {
+  //     //   console.log('Failed getting background')
+  //     // }
+  //   })
+  // }
+  // getBackground()
+  
 })();
 
 //client
